@@ -34,4 +34,5 @@
  *= require ./app/shared/_copy_modal
  *= require ./app/feedback/_new
  *
+ *= require ./app/application/cedia
  */
