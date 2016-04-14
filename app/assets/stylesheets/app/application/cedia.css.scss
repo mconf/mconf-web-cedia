@@ -16,7 +16,7 @@ ul#navbar-left-links, #navbar #navbar-right-links {
 #main-logo {
   margin: 25px;
   width: 175px;
-  height: 50px;
+  height: 47px;
 }
 
 #footer-wrapper {
@@ -57,10 +57,10 @@ ul#navbar-left-links, #navbar #navbar-right-links {
 
 #footer-logo {
   margin: 10px;
-  background: image-url('cedia/logo-gray.png') no-repeat scroll left top transparent;
-  background-size: 175px 50px;
-  width: 175px;
-  height: 50px;
+  background: image-url('cedia/logo-square.png') no-repeat scroll left top transparent;
+  background-size: 53px 70px;
+  width: 53px;
+  height: 70px;
 }
 
 #page-header-wrapper {
@@ -84,7 +84,7 @@ ul#navbar-left-links, #navbar #navbar-right-links {
   .dropdown-menu {
     top: $navbar-height - 47px; // 47 magic number for borders, margins, etc, makes it look good
     box-shadow: none;
-    border: 0;
+    border: 1px solid darken($cedia-light-gray, 3);
   }
 }
 
@@ -103,26 +103,27 @@ ul#navbar-left-links, #navbar #navbar-right-links {
 #content, #footer-wrapper, #navbar-wrapper, #page-header-wrapper {
   width: $contents-width;
   margin: 0 auto;
+  background: white;
 }
 #site {
-  background-image: linear-gradient(to bottom, #F6F8F9 0%, #ECF1F3 100%);
+  background: $cedia-light-gray;
   padding: 30px 0;
 }
 #navbar-wrapper {
-  box-shadow: 3px -3px 24px #CCDAE1;
+  @include border-radius(25px 25px 0 0);
 }
 #content {
-  box-shadow: 3px 0px 24px #CCDAE1;
   padding: 15px 10px;
-  background: $cedia-light-gray;
+  background: #fff;
+  @include border-radius(0 0 25px 25px);
 }
 #content-wrapper {
   padding-bottom: 0;
 }
 #footer-wrapper {
-  padding: 0 10px;
-  box-shadow: 3px 0px 24px #CCDAE1;
+  padding: 10px 10px 0 10px;
   position: relative;
+  background: $cedia-light-gray;
 }
 #footer-pusher {
   display: none;
@@ -157,8 +158,8 @@ body.errors {
 body.frontpage.show {
 
   #navbar-wrapper {
-    background: $cedia-header-bg-blue;
-    box-shadow: 3px -3px 24px #CCDAE1;
+    background: #fff;
+    box-shadow: none;
   }
 
   #navbar {
@@ -166,10 +167,10 @@ body.frontpage.show {
 
     #main-logo-cedia {
       margin-left: 50px;
-      margin-top: 30px;
+      margin-top: 40px;
       float: left;
       width: 420px;
-      height: 119px;
+      height: 120px;
     }
 
     #main-logo {
@@ -187,5 +188,4 @@ body.frontpage.show {
   .form-actions {
     background: $transparent;
   }
-
 }
